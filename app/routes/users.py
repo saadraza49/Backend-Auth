@@ -1,8 +1,3 @@
-"""
-User Routes — /users
-────────────────────
-GET /users/me  → return the currently authenticated user
-"""
 
 from fastapi import APIRouter, Depends
 

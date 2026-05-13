@@ -1,40 +1,14 @@
-"""
-Security Utilities — Password Hashing & JWT Tokens
-───────────────────────────────────────────────────
-
-Password Hashing
-    Uses passlib's CryptContext with bcrypt.
-    • hash_password()   → returns a one-way bcrypt hash
-    • verify_password() → constant-time comparison
-
-JWT Tokens
-    Uses python-jose (JOSE = JSON Object Signing and Encryption).
-    • create_access_token() → signs a payload with HS256
-
-    HS256 explained:
-        "HS256" stands for **HMAC with SHA-256**.
-        • HMAC = Hash-based Message Authentication Code
-        • SHA-256 = Secure Hash Algorithm producing a 256-bit digest
-        • It is a *symmetric* algorithm: the same SECRET_KEY is used
-          to both sign and verify the token.
-        • The value is a **string** ("HS256"), not a number.
-"""
-
 from datetime import datetime, timedelta, timezone
-
 from jose import jwt
 from passlib.context import CryptContext
-
 from app.config import settings
 
 
-# ── Password Hashing ────────────────────────────────────────────────
-
+# ── Password Hashing ───
 pwd_context = CryptContext(
     schemes=["bcrypt"],
     deprecated="auto",
 )
-
 
 def hash_password(plain_password: str) -> str:
     """Return a bcrypt hash of the given plain-text password."""

@@ -1,8 +1,3 @@
-"""
-User ORM Model
-───────────────
-Represents the `users` table in PostgreSQL.
-"""
 
 from datetime import datetime, timezone
 

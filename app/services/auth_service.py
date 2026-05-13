@@ -1,10 +1,3 @@
-"""
-Authentication Service Layer
-─────────────────────────────
-Business logic for registration and login.
-Keeps route handlers thin and testable.
-"""
-
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
 
@@ -16,7 +9,7 @@ from app.core.security import hash_password, verify_password, create_access_toke
 class AuthService:
     """Encapsulates authentication business logic."""
 
-    # ── Registration ────────────────────────────────────────────────
+    # ── Registration ──
 
     @staticmethod
     def register_user(payload: UserCreate, db: Session) -> User:
@@ -54,7 +47,7 @@ class AuthService:
         db.refresh(new_user)
         return new_user
 
-    # ── Login ───────────────────────────────────────────────────────
+    # ── Login ──
 
     @staticmethod
     def authenticate_user(email: str, password: str, db: Session) -> Token:

@@ -1,8 +1,4 @@
-"""
-Pydantic v2 Schemas for Authentication
-───────────────────────────────────────
-Request / response models used by the API layer.
-"""
+
 
 from datetime import datetime
 
