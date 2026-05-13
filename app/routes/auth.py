@@ -1,9 +1,4 @@
-"""
-Auth Routes — /auth
-───────────────────
-POST /auth/register  → create a new user
-POST /auth/login     → authenticate and receive JWT (form-based for Swagger)
-"""
+
 
 from fastapi import APIRouter, Depends, status
 from fastapi.security import OAuth2PasswordRequestForm

@@ -8,19 +8,6 @@ from app.database import Base
 
 
 class User(Base):
-    """
-    SQLAlchemy 2.0-style User model.
-
-    Columns
-    -------
-    id              : int   — auto-increment primary key
-    username        : str   — unique, indexed
-    email           : str   — unique, indexed
-    hashed_password : str   — bcrypt hash (never store plain text!)
-    is_active       : bool  — soft-delete / deactivation flag
-    created_at      : datetime — server-default UTC timestamp
-    """
-
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(
