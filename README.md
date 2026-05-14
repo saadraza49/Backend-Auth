@@ -29,3 +29,21 @@ A robust **Authentication & Authorization** REST API built with Python, featurin
 ---
 
 ## 📁 Project Structure
+```
+backend-auth/
+├── app/
+│   ├── main.py           # FastAPI app entry point
+│   ├── database.py       # SQLAlchemy engine & session
+│   ├── models.py         # Database models
+│   ├── schemas.py        # Pydantic request/response schemas
+│   ├── routers/
+│   │   ├── auth.py       # /login endpoint
+│   │   └── users.py      # /register & user endpoints
+│   └── utils/
+│       ├── hashing.py    # Bcrypt password hashing
+│       └── jwt.py        # Token creation & verification
+├── alembic/              # Database migrations
+├── alembic.ini
+├── requirements.txt
+└── .env                  # Environment variables
+```
