@@ -1,4 +1,4 @@
-# 🔐 Backend-Auth
+# 🔐 Backend-Authentication
 
 A robust **Authentication & Authorization** REST API built with Python, featuring JWT-based security, password hashing, role-based access, and a cloud PostgreSQL database.
 
